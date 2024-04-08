@@ -6,7 +6,7 @@
 /*   By: lkah-chu <lkah-chu@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 15:45:27 by lkah-chu          #+#    #+#             */
-/*   Updated: 2024/04/08 15:47:10 by lkah-chu         ###   ########.fr       */
+/*   Updated: 2024/04/08 16:44:59 by lkah-chu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,14 +39,15 @@ char	*read_line_to_leftover(int fd, char *leftover_string)
 char	*get_next_line(int fd)
 {
 	char		*one_line;
-	static char	*static_leftover_string[4096];
+	static char	*static_left_string[4096];
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	static_leftover_string[fd] = read_line_to_leftover(fd, static_leftover_string[fd]);
-	if (!static_leftover_string[fd])
+	static_left_string[fd] = read_line_to_leftover(fd,
+			static_left_string[fd]);
+	if (!static_left_string[fd])
 		return (NULL);
-	one_line = get_one_line(static_leftover_string[fd]);
-	static_leftover_string[fd] = get_leftover_string(static_leftover_string[fd]);
+	one_line = get_one_line(static_left_string[fd]);
+	static_left_string[fd] = get_leftover_string(static_left_string[fd]);
 	return (one_line);
 }

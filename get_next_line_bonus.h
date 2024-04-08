@@ -6,12 +6,12 @@
 /*   By: lkah-chu <lkah-chu@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 15:48:46 by lkah-chu          #+#    #+#             */
-/*   Updated: 2024/04/08 15:49:03 by lkah-chu         ###   ########.fr       */
+/*   Updated: 2024/04/08 16:55:51 by lkah-chu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#ifndef GET_NEXT_LINE_BONUS_H
+# define GET_NEXT_LINE_BONUS_H
 # include <stdlib.h>
 # include <unistd.h>
 
